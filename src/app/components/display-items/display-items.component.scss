@@ -1,0 +1,47 @@
+$primary-color:#02837E;
+$secondary-color:#F5A996;
+
+.bg-color {
+    background-color: $primary-color !important;
+  }
+  .searchBar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    margin-top: 1rem;
+  }
+  
+  #searchQueryInput {
+    width: 100%;
+    height: 3.5rem;
+    background: $primary-color;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem 3.5rem 0.5rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  #searchQueryInput::placeholder {
+    color: white;
+  }
+  
+  #searchQuerySubmit {
+    width: 4rem;
+    height: 3.5rem;
+    margin-left: -3.5rem;
+    background: none;
+    border: none;
+    outline: none;
+  }
+  
+  #searchQuerySubmit:hover {
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,47 @@
+.share_btn {
+  font-size: 36px;
+  cursor: pointer;
+}
+.share_links {
+  list-style: none;
+}
+
+.share_links li {
+  display: inline-block;
+  //   background-color: black;
+  margin: 15px;
+  border-radius: 50%;
+  //   background: #000;
+}
+.share_icon {
+  color: white;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  height: 60px;
+  width: 60px;
+}
+.share_links .bg_fb {
+  color: #fff;
+  background: #3b5998;
+}
+.share_links .bg_insta {
+  color: #fff;
+  background: #2aabee;
+}
+.share_links .bg_whatsapp {
+  color: #fff;
+  background: #25d366;
+}
+
+.share_links li:hover .share_icon {
+  color: #fff;
+}
+$primary-color: #02837e;
+$secondary-color: #f5a996;
+
+.bg-color {
+  background-color: $primary-color !important;
+}

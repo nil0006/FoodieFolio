@@ -1,0 +1,30 @@
+
+<nav class="bg-color">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
+      <a href="" class="flex items-center">
+        
+        <span class="self-center text-2xl font-medium whitespace-nowrap text-white"> <i class="fa-solid fa-arrow-left text-2xl text-white"></i> Items</span>
+      </a>
+      
+    </div>
+   
+  </nav>
+  <div class="searchBar">
+    <input id="searchQueryInput" [(ngModel)]="ItemSearchData" type="text" name="searchQueryInput" placeholder="Search Items" value="" />
+    <button id="searchQuerySubmit" type="submit" name="searchQuerySubmit" (click)="SearchItem()">
+      <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+        <path fill="#FFF"
+          d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
+      </svg>
+    </button>
+  </div>
+  <div class="grid grid-cols-2 grid-rows-1 gap-4" >
+    <div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white m-3" *ngFor="let item of items" (click)="goToRecipeItem(item.strIngredient)">
+        <img class="w-full" [src]="returnSourse(item.strIngredient)" alt="Sunset in the mountains">
+        <div class="px-6 py-4">
+          <div class="font-bold text-lg text-center mb-2">{{item?.strIngredient}}</div>
+        </div>
+        
+      </div>
+</div>
+  

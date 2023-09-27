@@ -1,0 +1,49 @@
+<div class="modal-body text-center p-5">
+  <span class="text-xl">Do you like this? Share with your friends!</span>
+  <div class="mt-5">
+    <ul class="share_links">
+      <li class="bg_fb">
+        <a
+          href="https://www.facebook.com/sharer/sharer.php?u=meal69.netlify.app&amp;src=sdkpreparse"
+          class="share_icon"
+          rel="tooltip"
+          target="_blank"
+          title="Facebook"
+          ><i class="fa-brands fa-facebook-f"></i
+        ></a>
+      </li>
+
+      <li class="bg_insta">
+        <a
+          href="https://t.me/share/url?url=meal69.netlify.app&text=Take%20a%20look%20at%20this%20awesome%20website%20That%20has%20lot%20of%20recipes"
+          target="_blank"
+          class="share_icon"
+          rel="tooltip"
+          title="Telegram"
+          ><i class="fa-brands fa-telegram"></i
+        ></a>
+      </li>
+
+      <li class="bg_whatsapp">
+        <a
+          href="https://web.whatsapp.com/send?text=meal69.netlify.app"
+          data-text="Take a look at this awesome website That has lot of recipes"
+          class="share_icon"
+          target="_blank"
+          rel="tooltip"
+          title="Whatsapp"
+          ><i class="fa-brands fa-whatsapp"></i
+        ></a>
+      </li>
+    </ul>
+    <p>Or copy link</p>
+    <div class="field">
+      <button
+        class="px-4 py-2 bg-color text-white rounded-md"
+        [cdkCopyToClipboard]="'nilportfolio.netlify.app'"
+      >
+        <i class="fa-solid fa-link"></i>Copy
+      </button>
+    </div>
+  </div>
+</div>

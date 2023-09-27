@@ -1,0 +1,21 @@
+
+<nav class="bg-color">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
+      <a href="" class="flex items-center">
+        
+        <span class="self-center text-2xl font-medium whitespace-nowrap text-white"> <i class="fa-solid fa-arrow-left text-2xl text-white"></i> Catagories</span>
+      </a>
+      
+    </div>
+  </nav>
+  
+<div class="grid grid-cols-2 grid-rows-1 gap-4" >
+    <div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white m-3" *ngFor="let catagory of allCatagory" (click)="goToRecipeCatagory(catagory.strCategory)">
+        <img class="w-full" [src]="catagory?.strCategoryThumb" alt="Sunset in the mountains">
+        <div class="px-6 py-4">
+          <div class="font-bold text-lg text-center mb-2">{{catagory?.strCategory}}</div>
+        </div>
+        
+      </div>
+</div>
+    
