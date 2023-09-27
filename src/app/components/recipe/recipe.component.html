@@ -1,41 +1,53 @@
 <nav class="bg-color">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
+  <div
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+  >
     <a (click)="back()" class="flex items-center">
-
-      <span class="self-center text-2xl font-medium whitespace-nowrap text-white"> <i
-          class="fa-solid fa-arrow-left text-2xl text-white"></i> Recipe</span>
+      <span
+        class="self-center text-2xl font-medium whitespace-nowrap text-white"
+      >
+        <i class="fa-solid fa-arrow-left text-2xl text-white"></i> Recipe</span
+      >
     </a>
-
   </div>
-
 </nav>
 <div class="flex flex-col lg:flex-row p-3">
-  <div class=" flex justify-center items-start ">
-    <img [src]="mealData?.strMealThumb" alt="" class="rounded-lg w-2/3  md:w-1/2 lg:w-full ">
+  <div class="flex justify-center items-start">
+    <img
+      [src]="mealData?.strMealThumb"
+      alt=""
+      class="rounded-lg w-2/3 md:w-1/2 lg:w-full"
+    />
   </div>
   <div class="w-full flex flex-col lg:pl-5">
-    <span class="text-xl  w-full font-semibold mt-3 text-black">{{mealData?.strMeal}}</span>
+    <span class="text-xl w-full font-semibold mt-3 text-center text-black">{{
+      mealData?.strMeal
+    }}</span>
 
-    <div class="flex justify-around items-center">
-      <span class="text-lg  w-full font-medium mt-3 text-black">Origin: {{mealData?.strArea}}</span>
-      <span class="text-lg  w-full font-medium mt-3 text-black">Catagory: {{mealData?.strCategory}}</span>
-
+    <div class="flex justify-between items-center">
+      <span class="text-lg w-full text-center font-medium mt-3 text-black"
+        >Origin: {{ mealData?.strArea }}</span
+      >
+      <span class="text-lg w-full text-center font-medium mt-3 text-black"
+        >Catagory: {{ mealData?.strCategory }}</span
+      >
     </div>
     <div class="mt-5 w-full">
-        <mat-tab-group mat-stretch-tabs="true" mat-align-tabs="start">
-            <mat-tab label="Ingredients"> <div *ngFor="let ingredent of ingredientsArray" class="w-full">
-                <div class="text-lg w-full font-medium mt-3 text-black">
-                  <span>{{ingredent.ingredient}}: </span>
-                  <span>{{ingredent.measure}}</span>
-                </div>
-              </div></mat-tab>
-            <mat-tab label="Instruction"><div class="text-lg">
-                {{mealData?.strInstructions}}
-            </div></mat-tab>
-            
-          </mat-tab-group>
-      
+      <mat-tab-group mat-stretch-tabs="true" mat-align-tabs="start">
+        <mat-tab label="Ingredients">
+          <div *ngFor="let ingredent of ingredientsArray" class="w-full">
+            <div class="text-lg w-full font-medium mt-3 text-black">
+              <span>{{ ingredent.ingredient }}: </span>
+              <span>{{ ingredent.measure }}</span>
+            </div>
+          </div></mat-tab
+        >
+        <mat-tab label="Instruction"
+          ><div class="text-lg">
+            {{ mealData?.strInstructions }}
+          </div></mat-tab
+        >
+      </mat-tab-group>
     </div>
   </div>
 </div>
-
